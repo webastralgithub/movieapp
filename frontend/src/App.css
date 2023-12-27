@@ -1,0 +1,376 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.login {
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login-header{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 80px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-top: 0;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.login input{
+  border-radius: 10px;
+background: #224957;
+  width: 100%;
+  color: #fff;
+
+  font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
+
+margin-bottom: 24px;
+padding: 11px 16px;
+border: none;
+box-sizing: border-box;
+}
+
+.login input:-webkit-autofill,
+.login input:-webkit-autofill:hover,
+.login input:-webkit-autofill:focus {
+  /* Set the background color and other styles */
+  -webkit-background: transparent;
+  -webkit-box-shadow: 0 0 0px 1000px white inset; /* Change 'white' to your desired color */
+}  
+
+.login button{
+border-radius: 10px;
+background: #2BD17E;
+font-size: 16px;
+font-weight: 700;
+line-height: 24px; /* 150% */
+color: #fff;
+border: none;
+padding: 15px;
+width: 100%;
+}
+
+.remember{
+  margin-bottom: 24px;
+}
+
+.remember,
+.remember label{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 8px;
+}
+
+.remember label{
+  color: #FFF;
+text-align: center;
+font-size: 14px;
+font-weight: 400;
+line-height: 24px; /* 171.429% */
+}
+
+.remember label input{
+  margin: 0;
+  border-radius: 5px;
+  width: 18px;
+}
+
+
+
+
+.custom-checkbox {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.checkbox-label {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px; /* Adjust font size */
+}
+
+.hidden-checkbox {
+  position: absolute;
+  opacity: 0;
+}
+
+.checkbox-design {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  position: relative;
+  vertical-align: middle;
+  margin-right: 8px; /* Adjust spacing */
+  background-color:#224957; /* Transparent background */
+  margin-top: 2px;
+}
+
+.checkbox-design::after {
+  content: '';
+  position: absolute;
+  top: 2px; /* Adjust position of the checkmark */
+  left: 5px; /* Adjust position of the checkmark */
+  width: 5px; /* Width of the checkmark */
+  height: 10px; /* Height of the checkmark */
+  border: solid #fff; /* Checkmark color */
+  border-width: 0 2px 2px 0; /* Checkmark dimensions */
+  transform: rotate(45deg); /* Rotate the checkmark */
+  opacity: 0; /* Initially hide the checkmark */
+  transition: opacity 0.3s ease-in-out; /* Add transition effect */
+}
+
+.hidden-checkbox:checked + .checkbox-design::after {
+  opacity: 1; /* Show the checkmark when the checkbox is checked */
+}
+
+.checkbox-text {
+  vertical-align: middle;
+}
+
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+
+.add-edit-form-container form{
+  display: flex;
+  gap: 127px;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.add-edit-form-container form .file-upload{
+width: 100%;
+height: 504px;
+
+border-radius: 10px;
+border: 2px dashed #FFF;
+background: #224957;
+display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.add-edit-form-container form .add-mov-right-form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.add-edit-form-container form .add-mov-right-form .add-mov-top{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 64px;
+}
+
+.add-edit-form-container form .add-mov-right-form .add-mov-top input{
+  border-radius: 10px;
+  background: #224957;
+  width: 362px;
+    color: #fff;
+  
+    font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  
+  margin-bottom: 24px;
+  padding: 11px 16px;
+  border: none;
+  box-sizing: border-box;
+  margin-bottom: 0;
+}
+
+.add-edit-form-container form .add-mov-right-form .add-mov-top input::placeholder{
+  opacity: 0.9;
+  color: #fff;
+}
+
+.add-edit-form-container form .add-mov-right-form .add-mov-footer{
+  display: flex;
+  gap: 16px;
+}
+
+button, a{
+  cursor: pointer;
+  transition: all .8s;
+}
+
+button:hover, a:hover{
+  cursor: pointer;
+  transition: all .8s;
+  background: #17864f !important;
+}
+
+.add-edit-form-container{
+  padding-bottom: 190px;
+}
+
+.add-edit-form-container form .add-mov-right-form .add-mov-footer button{
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid #FFF;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px; /* 150% */
+  color: #fff;
+  padding: 15px 55px;
+}
+
+.add-edit-form-container form .add-mov-right-form .add-mov-footer button:last-child{
+  border: 1px solid #2BD17E;
+background: #2BD17E;
+}
+
+.add-edit-form-container form .add-mov-right-form .add-mov-top input:last-child{
+  width: 241px;
+}
+
+.file-uploadd{
+  height: 80%;
+  width: 80%;
+}
+
+.file-uploadd img{
+  height: 100%;
+  width: 100%;
+}
+
+
+.footer-vector-all{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: auto;
+}
+
+.footer-vector-all img{
+  width: 100%;
+}
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@media screen and (max-width:900px){
+  .login {
+    width: 90%;
+  }
+
+  body{
+    background-image: url("../public/footer-vector2.png") !important;
+  }
+
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .movie-image {
+    height: 246px;
+  }
+
+  .movie-item {
+    padding: 0px;
+  }
+
+  .movie-image {
+    border-radius: 12px 12px 0 0;
+  }
+
+  .movie-details h3 {
+    font-size: 16px;
+  }
+
+  .movies-header h3 {
+    text-align: left;
+    font-size: 32px;
+  }
+
+  .movies-header {
+    padding: 80px 0;
+  }
+
+  .movies-header a:last-child h3{
+    font-size: 0px;
+  }
+
+  .add-edit-form-container form{
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .add-edit-form-container form .add-mov-right-form .add-mov-top {
+    margin-bottom: 24px;
+    width: 100%;
+  }
+
+  .add-edit-form-container form .add-mov-right-form .add-mov-top input:last-child{
+    width: 100%;
+  }
+
+  .add-edit-form-container form .add-mov-right-form .add-mov-top input{
+    width: 100%;
+  }
+
+  .add-edit-form-container form .add-mov-right-form .add-mov-footer {
+    width: 100%;
+  }
+
+  .add-edit-form-container form .add-mov-right-form .add-mov-footer button{
+    width: 100%;
+  }
+  
+}
